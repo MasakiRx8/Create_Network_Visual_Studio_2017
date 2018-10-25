@@ -44,13 +44,13 @@ int main() {
 	// Please specify the type of network to generate later.
 	bool all_create = false;
 
-	int N = 10000;						// number of people
-	int k = 8;							// value of average degree  ***you should write value that is a multiple of two***
-	int network = BASF;					// network type
+	int N = 10000;				// number of people
+	int k = 8;				// value of average degree  ***you should write value that is a multiple of two***
+	int network = BASF;			// network type
 	int number_of_generating = 1; 		// number of networks to generate
-										// Since Lattice and RRG each have the same output every time, they generate only once.
-	double p_SW = 0.05;					// probability of creating shortcut in the creating SW network
-	double p_HCSF = 0.05;				// probability of interrupting and creating default BASF in the creating HCSF network
+	// Since Lattice and RRG each have the same output every time, they generate only once.
+	double p_SW = 0.05;			// probability of creating shortcut in the creating SW network
+	double p_HCSF = 0.05;			// probability of interrupting and creating default BASF in the creating HCSF network
 	string F_cd = "../Network/";		// destination directory
 
 	if (all_create == false) _create_network(N, k, network, number_of_generating, p_SW, p_HCSF, F_cd);
@@ -88,7 +88,7 @@ void _create_network(int N, int k, int network, int number_of_generating, double
 		case SW:
 			creating_SW(N, k, &neighbor, p_SW);
 			F_ncd = "SW/";
-			F_network = "SW-" + to_string(k) + "-" + double_to_string(p_SW, 2);
+			F_network = "SW" + to_string(k) + "-" + double_to_string(p_SW, 2);
 			break;
 		case RRG:
 			creating_RRG(N, k, &neighbor);
@@ -146,7 +146,7 @@ void _all_create_network(int N, int k, int number_of_generating, double p_SW, do
 			case SW:
 				creating_SW(N, k, &neighbor, p_SW);
 				F_ncd = "SW/";
-				F_network = "SW-" + to_string(k) + "-" + double_to_string(p_SW, 2);
+				F_network = "SW" + to_string(k) + "-" + double_to_string(p_SW, 2);
 				break;
 			case RRG:
 				creating_RRG(N, k, &neighbor);
