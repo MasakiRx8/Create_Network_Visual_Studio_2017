@@ -11,7 +11,7 @@ ex.BASF, HCSF, Lattice, SW, RRG<br>
 <br>
 
 # Dpendency
-Language used : C++11<br>
+Language used : C++<br>
 Compiler : Visual Studio 2017<br>
 # Usage
 First, create new empty project.<br>
