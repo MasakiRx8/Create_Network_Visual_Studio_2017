@@ -6,8 +6,8 @@ ex.BASF, HCSF, Lattice, SW, RRG<br>
 |Average degree is 4 with BA-SF|Average degree is 4 with HC-SF|
 |:--:|:--:|
 |<img src="https://user-images.githubusercontent.com/44464443/47505163-8d358380-d8a8-11e8-95a4-876de10bbc43.png" width="400px" title="Image of the BA-SF, avrage degree is 4">|<img src="https://user-images.githubusercontent.com/44464443/47505306-e43b5880-d8a8-11e8-913d-39afa4eea84a.png" width="450px">|
-|Cluster Cofficient : 0.0346489|Cluster Cofficient : 0.128388|<br>
-|Average Path Length : 2.996|Average Path Length : 2.94242|
+|Cluster Cofficient : 0.16578|Cluster Cofficient : 0.615537|<br>
+|Average Path Length : 2.95657|Average Path Length : 2.79434|
 <br>
 
 # Dpendency
