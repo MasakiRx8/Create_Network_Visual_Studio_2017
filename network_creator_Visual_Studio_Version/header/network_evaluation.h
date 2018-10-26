@@ -12,18 +12,19 @@ double Cluster_Coefficient(std::vector<std::vector<int>>* neighbor) {
 	double CC = 0;
 	int N = (*neighbor).size();
 	for (int i = 0; i < N; i++) {
-		int cc = 0;
+		int cc_number = 0;
 		for (int j = 0; j < (*neighbor)[i].size() - 1; j++) {
 			int nb1 = (*neighbor)[i][j];
 			for (int q = j + 1; q < (*neighbor)[i].size(); q++) {
 				int nb2 = (*neighbor)[i][q];
 				for (int w = 0; w < (*neighbor)[nb1].size(); w++) if ((*neighbor)[nb1][w] == nb2) {
-					cc++;
+					cc_number++;
 					break;
 				}
 			}
-		}
-		CC += double(cc) / double((*neighbor)[i].size() * ((*neighbor)[i].size() - 1)) / 2.0;
+		}		
+		double cc = double( cc_number ) / ( double( (*neighbor)[i].size() * ( (*neighbor)[i].size() - 1 ) ) / 2.0 );
+		CC += cc;
 	}
 	CC /= double(N);
 	return CC;
